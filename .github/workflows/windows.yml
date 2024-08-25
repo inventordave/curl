@@ -572,7 +572,7 @@ jobs:
 
       - name: 'autotools build'
         if: ${{ matrix.build == 'autotools' }}
-        run: make -C bld -j5
+        run: make -C bld -j5 V=1
 
       - name: 'autotools build examples'
         if: ${{ matrix.build == 'autotools' }}
@@ -602,7 +602,7 @@ jobs:
 
       - name: 'cmake build'
         if: ${{ matrix.build == 'cmake' }}
-        run: cmake --build bld
+        run: cmake --build bld --verbose
 
       - name: 'cmake build tests'
         if: ${{ matrix.build == 'cmake' }}
