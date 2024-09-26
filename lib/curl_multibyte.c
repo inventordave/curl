@@ -34,6 +34,7 @@
 
 #if defined(_WIN32)
 
+#include <windows.h>
 #include "curl_multibyte.h"
 
 /*
