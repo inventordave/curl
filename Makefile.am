@@ -63,7 +63,6 @@ CMAKE_DIST =                                    \
 
 VC_DIST = projects/README.md                           \
  projects/build-openssl.bat                            \
- projects/build-wolfssl.bat                            \
  projects/checksrc.bat                                 \
  projects/generate.bat
 
