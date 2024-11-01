@@ -65,9 +65,7 @@ VC_DIST = projects/README.md                           \
  projects/build-openssl.bat                            \
  projects/build-wolfssl.bat                            \
  projects/checksrc.bat                                 \
- projects/generate.bat                                 \
- projects/wolfssl_options.h                            \
- projects/wolfssl_override.props
+ projects/generate.bat
 
 WINBUILD_DIST = winbuild/README.md winbuild/gen_resp_file.bat \
  winbuild/MakefileBuild.vc winbuild/Makefile.vc winbuild/makedebug.bat

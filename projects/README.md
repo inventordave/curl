@@ -39,8 +39,8 @@ a library is being compiled against dynamic runtime libraries.
 ## Dependencies
 
 The projects files also support build configurations that require third party
-dependencies such as OpenSSL, wolfSSL and libssh2. If you wish to support
-these, you will also need to download and compile those libraries as well.
+dependencies such as OpenSSL and libssh2. If you wish to support these, you
+will also need to download and compile those libraries as well.
 
 To support compilation of these libraries using different versions of
 compilers, the following directory structure has been used for both the output
@@ -67,10 +67,9 @@ of curl and libcurl as well as these dependencies.
             |_VC <version>
               |_<configuration>
 
-As OpenSSL and wolfSSL don't support side-by-side compilation when using
-different versions of Visual Studio, build helper batch files have been
-provided to assist with this. Please run `build-openssl -help` and/or
-`build-wolfssl -help` for usage details.
+As OpenSSL doesn't support side-by-side compilation when using different
+versions of Visual Studio, a helper batch file has been provided to assist with
+this. Please run `build-openssl -help` for usage details.
 
 ## Building with Visual C++
 
@@ -97,7 +96,7 @@ use `VC10\curl-all.sln` to build curl and libcurl.
 ## Running DLL based configurations
 
 If you are a developer and plan to run the curl tool from Visual Studio with
-any third-party libraries (such as OpenSSL, wolfSSL or libssh2) then you will
+any third-party libraries (such as OpenSSL or libssh2) then you will
 need to add the search path of these DLLs to the configuration's PATH
 environment. To do that:
 
@@ -117,16 +116,6 @@ DLL Debug - DLL OpenSSL (Win32):
 DLL Debug - DLL OpenSSL (x64):
 
     PATH=..\..\..\..\..\openssl\build\Win64\VC10\DLL Debug;C:\Windows\System32;
-    C:\Windows;C:\Windows\System32\Wbem
-
-DLL Debug - DLL wolfSSL (Win32):
-
-    PATH=..\..\..\..\..\wolfssl\build\Win32\VC10\DLL Debug;C:\Windows\System32;
-    C:\Windows;C:\Windows\System32\Wbem
-
-DLL Debug - DLL wolfSSL (x64):
-
-    PATH=..\..\..\..\..\wolfssl\build\Win64\VC10\DLL Debug;C:\Windows\System32;
     C:\Windows;C:\Windows\System32\Wbem
 
 If you are using a configuration that uses multiple third-party library DLLs
